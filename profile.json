@@ -1,0 +1,598 @@
+{
+    "name": "KIRUBAKAR M",
+    "email": "kirubakarvalli@gmail.com",
+    "phone": "9360886241",
+    "skills": [
+        "Java",
+        "C",
+        "C++",
+        "Digital Circuits",
+        "Signals and Processing",
+        "Raspberry Pi Projects",
+        "Image Processing",
+        "Wireless Communication",
+        "IoT Sensor Integration"
+    ],
+    "education": [
+        {
+            "institution": "Chennai Institute of Technology",
+            "degree": "B.E. Electronics and Communication Engineering",
+            "duration": "2022-2026",
+            "cgpa": "7.8/10"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Bharat Sanchar Nigam Limited",
+            "role": "telecommunications and networking",
+            "duration": "May 2023 – Jun 2023"
+        },
+        {
+            "company": "EPSSAT Manufacturing pvt ltd",
+            "role": "",
+            "duration": "Nov 2023 – Dec 2023"
+        },
+        {
+            "company": "EPSSAT Manufacturing pvt ltd",
+            "role": "",
+            "duration": ""
+        }
+    ],
+    "projects": [
+        {
+            "title": "OBJECT DETECTION USING PYTHON",
+            "description": "Developed an object detection system using Python to identify and label objects in real time."
+        },
+        {
+            "title": "Smart Agriculture System",
+            "description": "Designed a Smart Agriculture System utilizing IoT sensors to monitor various parameters"
+        },
+        {
+            "title": "Gas/Water Leakage Detection System",
+            "description": "ESP32, water leakage detection, gas leakage detection, IoT, real-time monitoring, smart safety systems"
+        }
+    ],
+    "certifications": [
+        "NPTEL",
+        "Cisco",
+        "Embedded C Programming"
+    ],
+    "suggested_roles": [
+        {
+            "role": "Hardware Engineer"
+        },
+        {
+            "role": "Software Engineer (Embedded Systems)"
+        },
+        {
+            "role": "Data Scientist/Researcher"
+        }
+    ]
+}{
+    "name": "Tumu lava karteek",
+    "email": "madurilava2008@gmail.com",
+    "phone": "805010895",
+    "location": "Chennai",
+    "socialHandles": {
+        "github": "lavakarteek",
+        "linkedin": "tumu-lava-karteek"
+    },
+    "skills": [
+        "Python",
+        "MySQL",
+        "C, C++",
+        "Java",
+        "Git & GitHub",
+        "AWS",
+        "Eclipse/Netbeans",
+        "Flask",
+        "NodeJs",
+        "ReactJs",
+        "NLTK",
+        "Docker"
+    ],
+    "education": [
+        {
+            "degree": "Btech Artificial Intelligence and Data Science",
+            "cgpa": "8.05",
+            "institute": "Chennai Institute Of Technology",
+            "duration": "2022 - present"
+        }
+    ],
+    "experience": [
+        {
+            "company": "Airports Authority of India, Development Inten (Onsite)",
+            "roles": "Development Inten",
+            "duration": "Aug 2024 – Sep 2024",
+            "location": "Chennai"
+        },
+        {
+            "company": "Statix.pro, Business Analyst cum Web dev intern (Startup)",
+            "roles": "Business Analyst cum Web dev intern",
+            "duration": "Jun 2024 - Jul 2024",
+            "location": "Erode"
+        }
+    ],
+    "projects": [
+        {
+            "name": "LipReadX",
+            "technologies": [
+                "Python",
+                "OpenCV",
+                "Tensorflow",
+                "numpy",
+                "matplotlib"
+            ],
+            "description": "Developed lip-reading system using Python, OpenCV, TensorFlow, and NumPy."
+        },
+        {
+            "name": "AeroInsight",
+            "technologies": [
+                "Python",
+                "Flask",
+                "Tkinter",
+                "Figma"
+            ],
+            "description": "A data analysis application and website developed during my internship at the Airports Authority of India (AAI)."
+        },
+        {
+            "name": "Csv Chatbot",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Streamlit",
+                "Langchain"
+            ],
+            "description": "Built an intelligent chatbot interface that enables users to interact with CSV files conversationally."
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Aws cloud practitioner"
+        },
+        {
+            "name": "Cloud Computing - NPTEL (Silver Rank)"
+        },
+        {
+            "name": "UIPath Automations Explorer (Automating Tasks)"
+        },
+        {
+            "name": "Build, Train and Deploy ML Models with Keras on Google Cloud"
+        },
+        {
+            "name": "Google Cloud Big Data and Machine Learning Fundamentals"
+        },
+        {
+            "name": "Introduction to Internet of Things - NPTEL (Top 5% score)"
+        },
+        {
+            "name": "Python and Machine Learning for Beginners - Udemy"
+        },
+        {
+            "name": "Foundations Data: Data Everywhere - Coursera"
+        },
+        {
+            "name": "Python for Data Science, AI & Development"
+        },
+        {
+            "name": "CCNA1 Introduction to Networks - Cisco"
+        }
+    ],
+    "achievements": [
+        {
+            "name": "Secured Elite Grade in Introduction of Internet of Things - NPTEL (Top 5%)"
+        },
+        {
+            "name": "Semifinalist in Tcs Codevita Season 11"
+        },
+        {
+            "name": "Semifinalist for the semifinal round in CIT hacker rank"
+        },
+        {
+            "name": "Semifinalist in Techgium"
+        }
+    ],
+    "competitiveProgramming": [
+        {
+            "platform": "leetcode",
+            "rating": "1600 (Top 31.3%)"
+        },
+        {
+            "platform": "codechef",
+            "rating": "1426 (2 Star)"
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Chennai Youth Assembly - Season II",
+            "description": "Leading quality education initiatives, including book drives, infrastructure improvements, and fundraising for under-resourced schools."
+        },
+        {
+            "organization": "Vels college",
+            "description": "Providing support and ensuring accessibility in academic and daily activities for physically challenged students."
+        }
+    ],
+    "suggested_roles": [
+        {
+            "role": "Machine Learning Engineer"
+        },
+        {
+            "role": "Cloud Engineer"
+        },
+        {
+            "role": "Data Scientist"
+        }
+    ]
+}{
+    "name": "Tumu Lava Kartik",
+    "email": "madurilava2008@gmail.com",
+    "phone": "805010895",
+    "address": "Chennai",
+    "socialMediaHandle": "lavakarteek",
+    "githubHandle": "tumu-lava-karteek",
+    "skills": [
+        "Python",
+        "MySQL",
+        "C, C++",
+        "Java",
+        "Git & GitHub",
+        "AWS",
+        "Eclipse/Netbeans",
+        "Flask",
+        "NodeJs",
+        "ReactJs",
+        "NLTK",
+        "Docker"
+    ],
+    "education": [
+        {
+            "course": "Btech Artificial Intelligence and Data Science",
+            "institute": "Chennai Institute Of Technology",
+            "duration": "2022 - present",
+            "cgpa": "8.05"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Airports Authority of India, Development Inten (Onsite)",
+            "company": "Airports Authority of India",
+            "duration": "Aug 2024 - Sep 2024"
+        },
+        {
+            "role": "Business Analyst cum Web dev Intern (Startup)",
+            "company": "Statix.pro",
+            "duration": "Jun 2024 - Jul 2024"
+        }
+    ],
+    "projects": [
+        {
+            "name": "LipReadX",
+            "technology": "Python, OpenCV, TensorFlow, NumPy, Matplotlib",
+            "description": "Developed lip-reading system using Python, OpenCV, TensorFlow, and NumPy, accurately interpreting speech from lips."
+        },
+        {
+            "name": "AeroInsight",
+            "technology": "Python, Flask, Tkinter, Figma",
+            "description": "A data analysis application and website developed during my internship at the Airports Authority of India (AAI)."
+        },
+        {
+            "name": "Csv Chatbot",
+            "technology": "Python, Pandas, Streamlit, Langchain",
+            "description": "Built an intelligent chatbot interface that enables users to interact with CSV files conversationally."
+        }
+    ],
+    "achievements": [
+        "Secured Elite Grade in Introduction of Internet of Things -NPTEL (Top 5% )",
+        "Semifinalist in Tcs Codevita Season 11",
+        "Semifinalist for the semifinal round in CIT hacker rank",
+        "Semifinalist in Techgium"
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner",
+        "Cloud Computing -NPTEL (Silver Rank)",
+        "UIPath Automations Explorer (Automating Tasks)",
+        "Build, Train and Deploy ML Models with Keras on Google Cloud",
+        "Google Cloud Big Data and Machine Learning Fundamentals",
+        "Introduction to Internet of Things -NPTEL(Top 5% score)",
+        "Python and Machine Learning for Beginners - Udemy",
+        "Foundations Data: Data Everywhere - Coursera",
+        "Python for Data Science, AI & Development",
+        "CCNA1 Introduction to Networks - Cisco"
+    ],
+    "volunteer": {
+        "organization": "Chennai Youth Assembly - Season II",
+        "role": "Leading quality education initiatives",
+        "initiatives": [
+            "Book drives",
+            "Infrastructure improvements",
+            "Fundraising for under-resourced schools",
+            "Drug awareness sessions"
+        ]
+    },
+    "volunteer_work": {
+        "organization": "Vels college",
+        "role": "Providing support and ensuring accessibility in academic and daily activities",
+        "support": [
+            "Physically challenged students",
+            "Ensuring accessibility in academic and daily activities"
+        ]
+    },
+    "suggested_roles": [
+        {
+            "role": "Artificial Intelligence/Machine Learning Engineer"
+        },
+        {
+            "role": "Cloud Infrastructure Engineer"
+        },
+        {
+            "role": "Full Stack Web Developer (Python/Node.js)"
+        }
+    ]
+}{
+    "name": "Lavakarteek",
+    "email": "madurilava2008@gmail.com",
+    "phone": "805010895",
+    "address": "Chennai",
+    "handles": {
+        "github": "lavakarteek",
+        "linkedin": "tumu-lava-karteek"
+    },
+    "education": [
+        {
+            "degree": "Btech Artificial Intelligence and Data Science",
+            "institution": "Chennai Institute Of Technology",
+            "duration": "2022 – present",
+            "cgpa": "8.05"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Development Inten (Onsite)",
+            "company": "Airports Authority of India",
+            "duration": "Aug 2024 – Sep 2024",
+            "location": "Chennai"
+        },
+        {
+            "role": "Business Analyst cum Web dev intern (Startup)",
+            "company": "Statix.pro",
+            "duration": "Jun 2024 - Jul 2024",
+            "location": "Erode"
+        }
+    ],
+    "projects": [
+        {
+            "name": "LipReadX",
+            "technologies": [
+                "Python",
+                "OpenCV",
+                "Tensorflow",
+                "numpy",
+                "matplotLib"
+            ],
+            "description": "Developed lip-reading system using Python, OpenCV, TensorFlow, and NumPy, accurately interpreting speech from lips."
+        },
+        {
+            "name": "AeroInsight",
+            "technologies": [
+                "Python",
+                "Flask",
+                "Tkinter",
+                "Figma"
+            ],
+            "description": "AeroInsight is a data analysis application and website developed during my internship at the Airports Authority of India (AAI)."
+        },
+        {
+            "name": "Csv Chatbot",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Streamlit",
+                "Langchain"
+            ],
+            "description": "Built an intelligent chatbot interface that enables users to interact with CSV files conversationally."
+        }
+    ],
+    "achievements": [
+        {
+            "award": "Elite Grade in Introduction of Internet of Things -NPTEL",
+            "performance": "Top 5%"
+        },
+        {
+            "award": "Semifinalist in Tcs Codevita Season 11"
+        },
+        {
+            "award": "Semifinalist for the semifinal round in CIT hacker rank"
+        },
+        {
+            "award": "Semifinalist in Techgium"
+        },
+        {
+            "award": "Highest contest rating of 1600 in leetcode"
+        },
+        {
+            "award": "Reached the highest contest rating of 1426 in Codechef"
+        }
+    ],
+    "skills": [
+        "Python",
+        "MySQL",
+        "C,C++",
+        "Java",
+        "Git & GitHub",
+        "AWS",
+        "Eclipse/Netbeans",
+        "Flask",
+        "NodeJs",
+        "ReactJs",
+        "NLTK",
+        "Docker"
+    ],
+    "certifications": [
+        "Aws cloud practitioner",
+        "Cloud Computing -NPTEL (Silver Rank)",
+        "UIPath Automations Explorer (Automating Tasks)",
+        "Build, Train and Deploy ML Models with Keras on Google Cloud",
+        "Google Cloud Big Data and Machine Learning Fundamentals",
+        "Introduction to Internet of Things -NPTEL(Top 5% score)",
+        "Python and Machine Learning for Beginners - Udemy",
+        "Foundations Data: Data Everywhere - Coursera",
+        "Python for Data Science, AI & Development",
+        "CCNA1 Introduction to Networks - Cisco"
+    ],
+    "volunteering": [
+        {
+            "organization": "Chennai Youth Assembly",
+            "role": "Leading quality education initiatives",
+            "responsibilities": "Including book drives, infrastructure improvements, and fundraising for under-resourced schools."
+        },
+        {
+            "organization": "Vels college",
+            "role": "Assisting physically challenged students",
+            "responsibilities": "Providing support and ensuring accessibility in academic and daily activities."
+        }
+    ],
+    "suggested_roles": [
+        {
+            "role": "Data Scientist"
+        },
+        {
+            "role": "Machine Learning Engineer"
+        },
+        {
+            "role": "Cloud Developer"
+        }
+    ]
+}{
+    "name": "Tumu lava karteek",
+    "email": "madurilava2008@gmail.com",
+    "phone": "805010895",
+    "address": "Chennai",
+    "handle": "lavakarteek",
+    "linkedin": "tumu-lava-karteek",
+    "skills": [
+        "Python",
+        "MySQL",
+        "C,C++",
+        "Java",
+        "Git & GitHub",
+        "AWS",
+        "Eclipse/Netbeans",
+        "Flask",
+        "NodeJs",
+        "ReactJs",
+        "NLTK",
+        "Docker"
+    ],
+    "education": [
+        {
+            "degree": "Btech Artificial Intelligence and Data Science",
+            "institution": "Chennai Institute Of Technology",
+            "duration": "2022 – present",
+            "cgpa": "8.05"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Airports Authority of India, Development Inten (Onsite)",
+            "company": "Airports Authority of India",
+            "duration": "Aug 2024 – Sep 2024"
+        },
+        {
+            "role": "Business Analyst cum Web dev intern",
+            "company": "Statix.pro",
+            "duration": "Jun 2024 - Jul 2024"
+        }
+    ],
+    "projects": [
+        {
+            "title": "LipReadX",
+            "technologies": [
+                "Python",
+                "OpenCV",
+                "Tensorflow",
+                "numpy",
+                "Matplotlib"
+            ],
+            "description": "Developed lip-reading system using Python, OpenCV, TensorFlow, and NumPy, accurately interpreting speech from lips."
+        },
+        {
+            "title": "AeroInsight",
+            "technologies": [
+                "Python",
+                "Flask",
+                "Tkinter",
+                "Figma"
+            ],
+            "description": "A data analysis application and website developed during my internship at the Airports Authority of India (AAI)."
+        },
+        {
+            "title": "Csv Chatbot",
+            "technologies": [
+                "Python",
+                "Pandas",
+                "Streamlit",
+                "Langchain"
+            ],
+            "description": "Built an intelligent chatbot interface that enables users to interact with CSV files conversationally."
+        }
+    ],
+    "achievements": [
+        "Secured Elite Grade in Introduction of Internet of Things -NPTEL (Top 5%)",
+        "Semifinalist in Tcs Codevita Season 11",
+        "Semifinalist for the semifinal round in CIT hacker rank",
+        "Semifinalist in Techgium"
+    ],
+    "certifications": [
+        {
+            "title": "Aws cloud practitioner"
+        },
+        {
+            "title": "Cloud Computing -NPTEL (Silver Rank)"
+        },
+        {
+            "title": "UIPath Automations Explorer (Automating Tasks)"
+        },
+        {
+            "title": "Build, Train and Deploy ML Models with Keras on Google Cloud"
+        },
+        {
+            "title": "Google Cloud Big Data and Machine Learning Fundamentals"
+        },
+        {
+            "title": "Introduction to Internet of Things -NPTEL(Top 5% score)"
+        },
+        {
+            "title": "Python and Machine Learning for Beginners - Udemy"
+        },
+        {
+            "title": "Foundations Data: Data Everywhere - Coursera"
+        },
+        {
+            "title": "Python for Data Science, AI & Development"
+        },
+        {
+            "title": "CCNA1 Introduction to Networks - Cisco"
+        }
+    ],
+    "volunteering": [
+        {
+            "organization": "Chennai Youth Assembly - Season II",
+            "initiatives": "Quality education initiatives, book drives, infrastructure improvements, and fundraising for under-resourced schools. Drug awareness sessions were also conducted."
+        },
+        {
+            "organization": "Vels college",
+            "initiatives": "Providing support and ensuring accessibility in academic and daily activities."
+        }
+    ],
+    "suggested_roles": [
+        {
+            "role": "Data Scientist"
+        },
+        {
+            "role": "Cloud Engineer"
+        },
+        {
+            "role": "Artificial Intelligence Engineer"
+        }
+    ]
+}
