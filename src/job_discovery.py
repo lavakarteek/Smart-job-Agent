@@ -70,10 +70,30 @@ class JobDiscoveryTool:
 
         return data
     
-
-
-    def fetch_theirstack_jobs(self, country_code="IN", limit=3):
-        """Fetch jobs from TheirStack API"""
+    
+    def fetch_theirstack_jobs(
+    self,
+    # Essential job seeker filters
+    roles=None,
+    country_code="IN", 
+    limit=25,
+    
+    # Job type & location preferences
+    remote=None,           # True=remote only, False=onsite only, None=both
+    location_pattern=None, # e.g., "Bangalore", "Hyderabad"
+    
+    # Job details
+    employment_type=None,  # "full_time", "part_time", "contract", "internship"
+    experience_level=None, # "junior", "mid_level", "senior", "c_level"
+    easy_apply=None,       # True=quick apply jobs only
+    
+    # Salary expectations
+    min_salary_usd=None,
+    
+    # Job freshness
+    posted_in_last_days=7
+):
+        """Fetch jobs from TheirStack API with job-seeker focused filters"""
         headers = {
             'Content-Type': "application/json",
             'Authorization': f"Bearer {THEIRSTACK_API_KEY}"
@@ -82,9 +102,40 @@ class JobDiscoveryTool:
         payload = {
             "page": 0,
             "limit": limit,
-            "job_country_code_or": [country_code],
-            "posted_at_max_age_days": 7  # REQUIRED: Jobs from last 7 days
+            "posted_at_max_age_days": posted_in_last_days
         }
+        
+        # Required country filter
+        if country_code:
+            payload["job_country_code_or"] = [country_code]
+        
+        # Job title/role - most important for job seekers
+        if roles:
+            payload["job_title_or"] = [roles] if isinstance(roles, str) else roles
+        
+        # Remote work preference
+        if remote is not None:
+            payload["remote"] = remote
+        
+        # Specific location within country
+        if location_pattern:
+            payload["job_location_pattern_or"] = [location_pattern]
+        
+        # Employment type (full-time, part-time, etc.)
+        if employment_type:
+            payload["employment_statuses_or"] = [employment_type] if isinstance(employment_type, str) else employment_type
+        
+        # Experience level
+        if experience_level:
+            payload["job_seniority_or"] = [experience_level] if isinstance(experience_level, str) else experience_level
+        
+        # Quick apply jobs
+        if easy_apply is not None:
+            payload["easy_apply"] = easy_apply
+        
+        # Salary expectations
+        if min_salary_usd:
+            payload["min_salary_usd"] = min_salary_usd
         
         try:
             response = requests.post(
@@ -96,10 +147,56 @@ class JobDiscoveryTool:
             print(f"API Response Status: {response.status_code}")
             response.raise_for_status()
             data = response.json()
-            return data.get('data', [])  # Note: jobs are in 'data' field, not 'jobs'
+            return data.get('data', [])
             
         except Exception as e:
             print(f"TheirStack error: {e}")
             if hasattr(e, 'response'):
                 print(f"Error response: {e.response.text}")
             return []
+
+
+
+
+
+
+        """
+        def fetch_theirstack_jobs(self, country_code="IN", limit=3, roles=None):
+            
+            headers = {
+                'Content-Type': "application/json",
+                'Authorization': f"Bearer {THEIRSTACK_API_KEY}"
+            }
+            
+            payload = {
+                "page": 0,
+                "limit": limit,
+                "job_country_code_or": [country_code],
+                "posted_at_max_age_days": 7  # REQUIRED: Jobs from last 7 days
+            }
+            
+            # Add role filtering if provided
+            if roles:
+                if isinstance(roles, str):
+                    roles = [roles]
+                payload["job_title_or"] = roles
+            
+            try:
+                response = requests.post(
+                    "https://api.theirstack.com/v1/jobs/search",
+                    json=payload,
+                    headers=headers
+                )
+                
+                print(f"API Response Status: {response.status_code}")
+                response.raise_for_status()
+                data = response.json()
+                return data.get('data', [])  # Note: jobs are in 'data' field, not 'jobs'
+                
+            except Exception as e:
+                print(f"TheirStack error: {e}")
+                if hasattr(e, 'response'):
+                    print(f"Error response: {e.response.text}")
+                return []
+            """
+        

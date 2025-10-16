@@ -33,28 +33,39 @@ if __name__ == "__main__":
     
     # for the theirstack jobs
      
-    
     jobs_tool = JobDiscoveryTool()
     
-    # Test with easy_apply filter
-    jobs = jobs_tool.fetch_theirstack_jobs(country_code="IN", limit=3)
+    # Test with software developer role
+    jobs = jobs_tool.fetch_theirstack_jobs(
+        country_code="IN", 
+        limit=5, 
+        roles="software developer"
+    )
     
-    print(f"✅ Found {len(jobs)} easy apply jobs in India")
+    print(f"✅ Found {len(jobs)} Software Developer jobs in India")
     
+    # Display job details
     for i, job in enumerate(jobs, 1):
-        print(f"{i}. {job.get('job_title', 'N/A')}")
+        print(f"\n{i}. {job.get('job_title', 'N/A')}")
         print(f"   Company: {job.get('company_object', {}).get('name', 'N/A')}")
         
-        # Fixed location line
+        # Location
         locations = job.get('locations', [])
         location_name = locations[0].get('name', 'N/A') if locations else 'N/A'
         print(f"   Location: {location_name}")
         
+        # Salary if available
+        salary = job.get('salary_string', 'Not specified')
+        print(f"   Salary: {salary}")
+        
+        # Apply link
         print(f"   Apply: {job.get('url', 'N/A')}")
+        
+        # Job description preview
         description = job.get('description', 'No description available')
-        print(f"   Description: {description[:200]}...")
-        print()
-        print()
+        print(f"   Description: {description[:150]}...")
+    
+    print(f"\n🎯 Search completed! Found {len(jobs)} Software Developer jobs.")
         
     # for the scrapping dog
     """

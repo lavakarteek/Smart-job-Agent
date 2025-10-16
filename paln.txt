@@ -1,0 +1,284 @@
+ok i want to code only the first
+🏁 Step 1 – Build Your Resume Understanding Layer (Foundation)
+
+This is the base of everything — before we scrape jobs, before MCP, before agent planning.
+Your agent needs to know who you are so it can pick the right jobs.
+
+🧩 Step 1A: Parse Resume → Structured Data
+
+Take your resume PDF/DOCX.
+
+Use PyMuPDF (for PDF) or python-docx (for DOCX) to extract text.
+
+Clean the text (remove headers, footers).
+
+Use NLP (spaCy) or regex to extract:
+
+Skills
+
+Education
+
+Experience
+
+Projects
+
+Certifications
+
+Result → Store as JSON profile:
+
+{
+  "name": "Tumu Lava Karteek",
+  "skills": ["Python", "Machine Learning", "SQL", "Data Analysis", "OpenCV"],
+  "education": "B.Tech AI & DS - Chennai Institute of Technology",
+  "experience": [
+    "Intern - Statix.pro (Data Analytics)",
+    "Intern - Airports Authority of India (ML & Web Development)"
+  ],
+  "projects": [
+    "Tkinter CSV Query Tool",
+    "Lip Reading System with TensorFlow",
+    "Harry Potter RAG Chatbot"
+  ]
+}
+
+🧩 Step 1B: Use LLM to Find Suitable Job Domains
+
+Once you have structured data:
+
+Call an LLM (GPT-4 or Claude) with a systematic prompt:
+
+import openai
+openai.api_key = "YOUR_KEY"
+
+prompt = f"""
+You are a career advisor.
+Here is a candidate profile:
+{profile_json}
+
+Suggest the top 3 job domains/roles that best fit this profile.
+Return only a JSON list like ["Role1", "Role2", "Role3"].
+"""
+
+response = openai.ChatCompletion.create(
+  model="gpt-4",
+  messages=[{"role": "system", "content": "You are an expert career advisor."},
+            {"role": "user", "content": prompt}]
+)
+print(response.choices[0].message["content"])
+
+
+Example Output:
+
+["Data Scientist", "Machine Learning Engineer", "Business Analyst"]
+
+
+Store these roles for the next step.
+
+🧩 Step 1C: Validate Output
+
+Look at the roles LLM suggested.
+
+If they make sense → ✅ proceed.
+
+If wrong (e.g., suggests "Frontend Developer" but you hate frontend) → tell the agent to ignore such roles next time (you can add a preference filter).
+
+✅ Why This Is Step 1
+
+Because everything after this depends on:
+
+What roles to search
+
+How to filter jobs
+
+How to rank eligibility
+
+If your agent doesn’t know what jobs are relevant, it will scrape random data and waste time.
+
+🎯 Deliverable After Step 1
+
+A working Python script that:
+
+Reads your resume.
+
+Extracts key info (skills, experience, projects).
+
+Calls an LLM to suggest job roles.
+
+Saves results in a profile.json file.
+
+This is your Agent Knowledge Base — the first building block.
+
+Once this is done, Step 2 will be:
+
+Build search_jobs() MCP tool using these roles to scrape/collect jobs.
+
+So your FIRST TASK right now:
+Build and test the Resume → JSON + Role Suggestion step.
+
+Would you like me to give you a complete ready-to-run Python file for
+as a project and now want to push to github and continue later?
+
+
++-----------------------+         +-------------------------+
+| Job Discovery Agent   |         | MCP Tools               |
+|-----------------------|         |-------------------------|
+| Goal: Fetch jobs      | <-----> | fetch_jobs(source,      |
+| - Scrape LinkedIn     |         | location, role, skills) |
+| - Filter by prefs     |         +-------------------------+
++-----------------------+
+            |
+            v
++-----------------------+         +-------------------------+
+| Resume Matcher Agent  |         | MCP Tools               |
+|-----------------------|         |-------------------------|
+| Goal: Match resume    | <-----> | parse_resume(file_path) |
+| to job postings       |         | parse_job_description() |
+| - Extract skills      |         | compute_match_score()  |
+| - Compute similarity  |         +-------------------------+
++-----------------------+
+            |
+            v
++-----------------------+         +-------------------------+
+| Application Filler    |         | MCP Tools               |
+| Agent                 | <-----> | browser_automation(url) |
+|-----------------------|         | fill_form(data)         |
+| Goal: Auto-fill forms |         | generate_cover_letter() |
+| - Generate cover      |         +-------------------------+
+| letter                |
++-----------------------+
+            |
+            v
++-----------------------+         +-------------------------+
+| Email Confirmation    | <-----> | MCP Tools               |
+| Agent                 |         | send_notification()     |
+|-----------------------|         | webhook_notify()        |
+| Goal: Ask user before |         +-------------------------+
+| submitting form       |
++-----------------------+
+            |
+            v
++-----------------------+         +-------------------------+
+| Human-in-the-Loop     | <-----> | MCP Tools               |
+| Agent                 |         | request_user_input()    |
+|-----------------------|         | solve_captcha_manually()|
+| Goal: Handle CAPTCHA, |         +-------------------------+
+| interruptions         |
++-----------------------+
+            |
+            v
++-----------------------+         +-------------------------+
+| Follow-Up Agent       | <-----> | MCP Tools               |
+| (Optional)            |         | monitor_email()         |
+|-----------------------|         | schedule_reminder()     |
+| Goal: Track applied   |         | update_job_status()     |
+| jobs & notifications  |         +-------------------------+
++-----------------------+
+job_search_project/
+│
+├─ .env
+├─ config.py
+├─ main.py                  # entrypoint → talks to MCP server
+│
+├─ mcp_server.py            # registers all MCP tools
+│
+├─ agents/                  # multi-agent layer
+│   ├─ job_discovery_agent.py
+│   ├─ resume_matcher_agent.py
+│   ├─ application_filler_agent.py
+│   ├─ email_confirmation_agent.py
+│   ├─ human_in_loop_agent.py
+│   └─ follow_up_agent.py
+│
+├─ src/                     # MCP tools layer
+│   ├─ jobs_discovery.py       # fetch_jobs()
+│   ├─ resume_parser.py        # parse_resume()
+│   ├─ matcher.py              # compute_match_score(), parse_job_description()
+│   ├─ application_filler.py   # fill_form(), generate_cover_letter()
+│   ├─ notifier.py             # send_notification()
+│   ├─ human_in_loop.py        # request_user_input()
+│   └─ follow_up.py            # monitor_email()
+│
+└─ data/
+    ├─ resumes/
+    ├─ jobs.json
+    ├─ profile.json
+    └─ matches.json
+
+
+
+
+(venv) D:\smart-job-agent>python -m src.main
+D:\smart-job-agent\src\main.py:72: SyntaxWarning: invalid escape sequence '\s'
+  jobs_tool = JobDiscoveryTool(cache_file=r"D:\smart-job-agent\jobs.json")
+{"role": "Data Scientist"},
+  {"role": "Business Analyst"},
+  {"role": "Software Developer"}
+✅ Resume parsed and profile saved to D:\smart-job-agent\profile.json
+
+🔍 Testing Job Discovery Tool with random role...
+=== DEBUG THEIRSTACK API ===
+API Key loaded: Yes
+API Response Status: 200
+✅ Found 5 Software Developer jobs in India
+
+1. Senior Software Developer
+   Company: Cashpor Micro Credit
+   Location: Varanasi
+   Salary: 6-16 Lacs
+   Apply: https://www.naukri.com/job-listings-senior-software-developer-cashpor-micro-credit-varanasi-6-to-10-years-041025010929
+   Description: **Job Position: - Senior Software Developer**
+
+
+
+**Location**: Head Office, Varanasi
+
+
+
+**Salary**: Based on industry norms
+
+
+
+**Experience**: 6...
+
+2. Software Developer
+   Company: Top American Exteriors, LLC
+   Location: Hyderabad
+   Salary: None
+   Apply: https://sg.linkedin.com/jobs/view/software-developer-at-top-american-exteriors-llc-4309105174
+   Description: We’re Hiring: Software Developer | Singapore / Remote-Friendly
+
+Location: Singapore (Hybrid / Remote options available)
+
+Employment Type: Full-time
+
+L...
+
+3. Software Developer
+   Company: Priacc Innovations Pvt Ltd.
+   Location: Pune
+   Salary: None
+   Apply: https://in.linkedin.com/jobs/view/software-developer-at-priacc-innovations-pvt-ltd-4308332836
+   Description: **Company Description**
+
+At Priacc Innovations, we are at the forefront of transforming the digital landscape. As a pioneering software solutions co...
+
+4. Edmo - Lead Software Developer - Full Stack Development
+   Company: EDMO
+   Location: Mumbai
+   Salary: None
+   Apply: https://www.hirist.tech/j/edmo-lead-software-developer-full-stack-development-1555007?ref=linkedin&utm_campaign=linkedin_apply&utm_medium=referral&utm_source=LinkedIn
+   Description: **Position Overview**
+We're seeking an exceptional Lead Software Developer Lead who can energize and guide a team of brilliant engineers while driving...
+
+5. Software Developer
+   Company: Tripfriday
+   Location: Hyderabad
+   Salary: 4-6 Lacs
+   Apply: https://www.naukri.com/job-listings-software-developer-tripfriday-hyderabad-2-to-7-years-041025013569
+   Description: 1. Build and maintain scalable web apps using ReactJS
+2. Deploy and manage applications on Google Cloud
+3. Integrate AI models like OpenAI into so...
+
+🎯 Search completed! Found 5 Software Developer jobs.
+
+(venv) D:\smart-job-agent>
